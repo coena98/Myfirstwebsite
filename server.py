@@ -38,7 +38,7 @@ def write_to_csv(data):
 def submit_form():
     if request.method == 'POST':
         data = request.form.to_dict()
-        write_to_file(data)
+        write_to_csv(data)
         return redirect('thank_you.html')
     else:
         return 'Something went wrong!'
